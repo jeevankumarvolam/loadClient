@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Table {
     private int tableId;
-    private List<Player> players;
+//    private List<Player> players;
 
 
 }

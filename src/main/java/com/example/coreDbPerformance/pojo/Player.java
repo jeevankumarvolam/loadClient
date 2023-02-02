@@ -1,3 +1,5 @@
+
+
 package com.example.coreDbPerformance.pojo;
 
 import jakarta.persistence.Column;
@@ -18,25 +20,23 @@ import java.util.UUID;
 @NoArgsConstructor
 @Getter
 @Setter
-@Data
 @Entity
-@Table(name = "players")
-public class Player implements Comparable<Player> {
-//    @Id
-//  @GeneratedValue
-//    private long playerId;
 
+public class Player implements Comparable<Player> {
     @Id
+  @GeneratedValue
+
+
     private String playerId= UUID.randomUUID().toString().replace("-","");
-    @Column(name = "player_name")
+   @Column(name = "player_name")
     private String playerName;
     @Column(name = "source")
     private String playerSource;
     @Column(name = "device_id")
     private String device_id;
-    @Column(name = "a23_pan_name")
+   @Column(name = "a23_pan_name")
     private String a23PanName;
-    @Column(name = "a23_pan_number")
+   @Column(name = "a23_pan_number")
     private String a23PanNumber;
 
     @Column(name = "chips")
@@ -57,3 +57,5 @@ public class Player implements Comparable<Player> {
 
     }
 }
+
+

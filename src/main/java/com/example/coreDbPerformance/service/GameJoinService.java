@@ -8,29 +8,27 @@ import org.springframework.stereotype.Service;
 
 import java.util.Random;
 
-@Service
-public class GameJoinService {
-    @Autowired
-    private  PlayerRepository playerRepository;
 
-    @Autowired
-    private  EndGameService endGameService;
-
-    @Autowired
-    private  PlayerCreationService playerCreationService;
-
-    public void setChips(Player player1, Player player2, Player player3) {
-        Random random = new Random();
-
-        player1.setChips(random.nextInt());
-        player2.setChips(random.nextInt());
-        player3.setChips(random.nextInt());
+public class GameJoinService extends Thread{
+   Player player1;
+   Player player2;
 
 
-
-        endGameService.declareWinner(player1,player2,player3);
-
+    public GameJoinService(Player player1, Player player2) {
+        this.player1 = player1;
+        this.player2 = player2;
 
     }
+
+
+   public void run(){
+
+
+
+
+   }
+
+
+
 
 }
